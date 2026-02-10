@@ -24,7 +24,7 @@ const Header = () => {
         <img
           src={zenveusLogo}
           alt="zenveus-logo"
-          className="w-40 h-auto object-contain bg-transparent "
+          className="md:w-40 w-25 h-auto object-contain bg-transparent "
         />
       </div>
 
@@ -32,7 +32,7 @@ const Header = () => {
         <div>
           <a
             href="#"
-            className="font-urbanist font-bold text-gray-700 hover:text-black p-2.5 text-l bg-gray-100 hover:bg-gray-200 transition-colors duration-300 rounded-4xl px-9 border border-gray-300 uppercase overflow-hidden"
+            className="font-urbanist font-bold text-gray-700 hover:text-black p-2.5 md:text-l text-sm bg-gray-100 hover:bg-gray-200 transition-colors duration-300 rounded-4xl md:px-9 px-4 border border-gray-300 uppercase overflow-hidden"
           >
             Book a Call
           </a>

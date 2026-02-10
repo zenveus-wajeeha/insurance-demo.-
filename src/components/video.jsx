@@ -31,6 +31,13 @@ const Video = () => {
           const appWidth = appMin + (appMax - appMin) * progress;
           appContainer.style.width = `${appWidth}%`;
 
+          // 👉 NEW PART YOU NEEDED
+          const videoElement = document.querySelector(".hero-video");
+          if (progress === 1 && videoElement) {
+            videoElement.play().catch(() => {
+              console.log("Autoplay blocked by browser");
+            });
+          }
           ticking = false;
         });
 
@@ -56,7 +63,7 @@ const Video = () => {
             </span>
             <h2 className="font-bold text-6xl mb-6 my-8 color-gray-800 mt-10">
               {/* Build smarter <em className="italic">widgets</em> for modern apps. */}
-             Build Better. Build Faster.<br></br> Build with Zenveus.
+              Build Better. Build Faster.<br></br> Build with Zenveus.
             </h2>
             <ul className="font-Meddium flex gap-6 text-sm md:text-lg text-[#40424C] mb-6 uppercase justify-center">
               <li>Embeddable</li>
@@ -81,7 +88,11 @@ const Video = () => {
             width: "80%",
           }}
         >
-          <video className="w-full aspect-video object-cover" controls>
+          <video
+            className="hero-video w-full aspect-video object-cover"
+            controls
+            muted
+          >
             <source src={video} type="video/mp4" />
           </video>
         </div>
@@ -92,7 +103,7 @@ const Video = () => {
         </p>
         <a
           href="#"
-          className="font-urbanist font-bold py-3.5  rounded-full px-15 text-sm md:text-md text-white mt-6 bg-[#d44131] transition-all duration-300 ease-in-out hover:shadow-2xl  hover:-translate-y-1  "
+          className="font-urbanist font-bold py-3.5  rounded-full px-8 md:px-15 text-sm md:text-md text-white mt-6 bg-[#d44131] transition-all duration-300 ease-in-out hover:shadow-2xl  hover:-translate-y-1  "
         >
           Schedule a Strategy Call
         </a>
