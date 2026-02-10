@@ -4,7 +4,7 @@ import zenveusLogo from "../../assets/images/Sacel with Zenveus Logo White.png";
 const Footer = () => {
   return (
     <footer className="bg-[#1B1E2A] text-[#f2eee5] py-15 px-8 rounded-t-3xl w-full">
-      <div className="w-full max-w-7xl flex justify-center text-center gap-16 mx-5">
+      <div className="w-full flex justify-center text-center gap-16 mx-5">
         <div>
           <div className="flex items-center justify-center">
             <img
