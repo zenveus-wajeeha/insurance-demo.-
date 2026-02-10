@@ -1,0 +1,48 @@
+@keyframes gradientMove {
+  0% {
+    background-position: 30% 50%;
+  }
+  50% {
+    background-position: 90% 50%;
+  }
+  100% {
+    background-position: 30% 50%;
+  }
+}
+
+.animated-gradient {
+  background-size: 200% 200%; 
+  background-repeat: no-repeat; 
+  animation: gradientMove 7s ease-in-out infinite;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("/fonts/static/Urbanist-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("/fonts/static/Urbanist-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("/fonts/static/Urbanist-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("/fonts/static/Urbanist-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("/fonts/static/Urbanist-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+body {
+  font-family: "Urbanist", sans-serif;
+}
