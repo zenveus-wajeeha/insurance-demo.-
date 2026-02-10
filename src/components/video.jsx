@@ -31,12 +31,13 @@ const Video = () => {
           const appWidth = appMin + (appMax - appMin) * progress;
           appContainer.style.width = `${appWidth}%`;
 
-          // 👉 NEW PART YOU NEEDED
           const videoElement = document.querySelector(".hero-video");
           if (progress === 1 && videoElement) {
             videoElement.play().catch(() => {
               console.log("Autoplay blocked by browser");
             });
+          } else if (progress < 1 && videoElement) {
+            videoElement.pause();
           }
           ticking = false;
         });
