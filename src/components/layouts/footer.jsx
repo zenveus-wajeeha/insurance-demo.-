@@ -1,5 +1,5 @@
 import React from "react";
-import zenveusLogo from "../../assets/images/Sacel with Zenveus Logo white.png";
+import zenveusLogo from "../../assets/images/Sacel with Zenveus Logo White.png";
 
 const Footer = () => {
   return (
